@@ -1,6 +1,7 @@
 <!-- Anfang Einbinden Button "neue Task" -->
 <?php include("content_newtask_btn.php"); ?>
 <?php include("bootstrap.php"); ?>
+<?php include("helpers/filter_helper.php"); ?>
 <!-- Ende Einbinden Button "neuer Task" -->
 <!-- Anfang Wrapper -->
 <div class="today_wrapper">
@@ -11,7 +12,7 @@
     <!-- Ende Today-Header -->
     <!-- Anfang Today-Inhalt -->
     <?php
-    foreach($tasks as $task)
+    foreach($new_tasks as $task)
     {
         echo '<div class="today_content">';
             echo '<!-- Anfang Linker-Inhalt -->';

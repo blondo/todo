@@ -1,4 +1,3 @@
-<!doctype html>
 <?php
     session_start();
     if (isset($_GET['content'])) {
@@ -38,8 +37,10 @@
     $_SESSION['last_prio'] = $prio;
     include( "includes/logged_in.php");
     include( "helpers/date_helper.php");
+    include( "helpers/link_helper.php");
     //include( "includes/bootstrap.php" );
 ?>
+<!doctype html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
