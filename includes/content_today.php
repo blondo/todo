@@ -1,7 +1,6 @@
+<?php include("helpers/filter_helper.php"); ?>
 <!-- Anfang Einbinden Button "neue Task" -->
 <?php include("content_newtask_btn.php"); ?>
-<?php include("bootstrap.php"); ?>
-<?php include("helpers/filter_helper.php"); ?>
 <!-- Ende Einbinden Button "neuer Task" -->
 <!-- Anfang Wrapper -->
 <div class="today_wrapper">

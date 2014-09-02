@@ -1,4 +1,4 @@
-<?php include("bootstrap.php"); ?>
+<?php include("./helpers/bootstrap.php"); ?>
 <!-- Start Rechter Inhalt  -->
 <!-- Start Info_Point -->
 <div class="info_point">
