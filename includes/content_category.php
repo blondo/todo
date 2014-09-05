@@ -1,6 +1,6 @@
 <!-- Anfang Einbinden Button "neue Kategorie" -->
 <?php include("content_category_btn.php"); ?>
-<?php include("bootstrap.php"); ?>
+<?php include("helpers/bootstrap.php"); ?>
 <!-- Ende Einbinden Button "neue Kategorie" -->
 <!-- Anfang Wrapper -->
 <div class="category_wrapper">
@@ -29,11 +29,11 @@
                     echo '<div class="cat_edit"><a href="#"><img src="./icons/pencil.png"></a></div>';
                     echo '<div class="cat_status"><a href="#">';
                         if($category['status']==1){
-                            echo '<img src="./icons/bulb_on.png">';
+                            echo '<img src="./icons/bulb_on.png" alt="aktiv">';
                         }
                         else
                         {
-                            echo '<img src="./icons/bulb_off.png">';
+                            echo '<img src="./icons/bulb_off.png" alt="inaktiv">';
                         }
                     echo '</a></div>';
                 echo '</div>';

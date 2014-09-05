@@ -33,7 +33,8 @@
         {
 
         }
-        /*if($query_cat.$operator.$query_prio)
+        //if($query_cat.$operator.$query_prio)
+        if($task['category']==1)
         {
             $new_tasks[] = array(
                 'category' => $task['category'],
@@ -42,9 +43,7 @@
                 'priority' => $task['priority'],
                 'officer' => $task['officer']
             );
-        }*/
-        echo $query_cat.$operator.$query_prio.'<br>';
+        }
+        //echo $query_cat.$operator.$query_prio.'<br>';
     }
-
-
 ?>
