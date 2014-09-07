@@ -18,7 +18,7 @@
             $query_cat = '$task[\'category\'] == '. $_SESSION['last_cat'];
             if($last_prio!="")
             {
-                $operator = ' AND ';
+                $operator = ' && ';
             }
         }
         else
@@ -34,7 +34,7 @@
 
         }
         //if($query_cat.$operator.$query_prio)
-        if($task['category']==1)
+        if($task['category']==$last_cat && $task['priority']==$last_prio)
         {
             $new_tasks[] = array(
                 'category' => $task['category'],

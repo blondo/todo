@@ -23,6 +23,7 @@
             echo '<div class="today_content_right">';
                 echo '<div class="today_content_right_header">';
                     echo '<h3>'.$categories[$task['category']]['name'].'</h3>';
+                    //echo '<h3>'.$task['category'].'</h3>';
                 echo '</div>';
                 echo '<!-- Anfang Optionen -->';
                 echo '<div class="today_content_right_options">';

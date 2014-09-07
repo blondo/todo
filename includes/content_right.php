@@ -11,9 +11,9 @@
     <div class="info_point_content">
         <ul>
             <?php
-                foreach($categories as $category)
+                foreach($categories as $key=>$category)
                 {
-                   echo '<a href="./index.php?content='.$_SESSION['last_site'].'&cat='.$category['name'].'&prio='.$_SESSION['last_prio'].'"><li class="link">'.$category['name'].'</li></a>';
+                   echo '<a href="./index.php?content='.$_SESSION['last_site'].'&cat='.$key.'&prio='.$_SESSION['last_prio'].'"><li class="link">'.$category['name'].'</li></a>';
                 }
             ?>
         </ul>
@@ -32,9 +32,9 @@
     <div class="info_point_content">
         <ul>
             <?php
-            foreach($priorities as $priority)
+            foreach($priorities as $key=>$priority)
             {
-                echo '<a href="./index.php?content='.$_SESSION['last_site'].'&cat='.$_SESSION['last_cat'].'&prio='.$priority['name'].'"><li class="link">'.$priority['name'].'</li></a>';
+                echo '<a href="./index.php?content='.$_SESSION['last_site'].'&cat='.$_SESSION['last_cat'].'&prio='.$key.'"><li class="link">'.$priority['name'].'</li></a>';
             }
             ?>
         </ul>
