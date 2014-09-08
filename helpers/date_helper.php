@@ -1,10 +1,21 @@
 <?php
-    /////////////////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Name: weekDays
-    // Beschreibung: Diese Funktion gibt folgendes aus: (Montag 28.07.2014 - Sonntag 03.08.2014)
-    //
-    /////////////////////////////////////////////////////////////////////////////////////////////////
+    /**
+     * Date-Helper: Hier werden verschiedene Funktionen, welche sich rund um das Datum drehen
+     * ausgeführt.
+     *
+     * @author      Manuel Hertach
+     * @copyright   2014 Manuel Hertach
+     *
+     * @version     1.0
+     */
+
+
+    /**
+     * weekDays
+     * Diese Funktion gibt folgendes aus: (Montag 28.07.2014 - Sonntag 03.08.2014)
+     *
+     * @return      string   erstellt oben genannten String und gibt diesen zurück
+     */
     function weekDays()
     {
         $dates = weekDate();
@@ -16,13 +27,13 @@
         return($ausgabe);
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Name: weekDate
-    // Beschreibung: Diese Funktion gibt das Datum vom Montag und Sonntag der aktuellen Woche
-    //               zurück
-    //
-    /////////////////////////////////////////////////////////////////////////////////////////////////
+    /**
+     * weekDate
+     * Diese Funktion gibt das Datum vom Montag und Sonntag der aktuellen Woche zurück
+     *
+     * @return      string      $dayStart -> Montag der aktuellen Woche
+     * @return      string      $dayEnd   -> Sonntag der aktuellen Woche
+     */
     function weekDate()
     {
         $dayStart = "";
@@ -62,12 +73,12 @@
         return array($dayStart, $dayEnd);
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Name: dayGerman
-    // Beschreibung: Wandelt den Tag in Deutsch um
-    //
-    /////////////////////////////////////////////////////////////////////////////////////////////////
+    /**
+     * dayGerman
+     * Wandelt den Tag in Deutsch um
+     *
+     * @return      string      gibt den Tag in Deutsch zurück
+     */
     function dayGerman($tag){
         switch ($tag){
             case 1:
