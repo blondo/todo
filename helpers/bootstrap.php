@@ -1,8 +1,8 @@
 <?php
     $categories = array(
         '1' => array( 'name'=> "HTML", 'create_date'=>"13.04.2014", 'creater'=>"MHE", 'status'=>1),
-        '2' => array('id'=>2,'name'=> "CSS", 'create_date'=>"20.06.2014", 'creater'=>"MHE", 'status'=>1),
-        '3' => array('id'=>3,'name'=> "JavaScript", 'create_date'=>"26.07.2014", 'creater'=>"MHE", 'status'=>0)
+        '2' => array('name'=> "CSS", 'create_date'=>"20.06.2014", 'creater'=>"MHE", 'status'=>1),
+        '3' => array('name'=> "JavaScript", 'create_date'=>"26.07.2014", 'creater'=>"MHE", 'status'=>0)
     );
 
     $priorities = array(

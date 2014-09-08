@@ -1,4 +1,3 @@
-<?php include("helpers/filter_helper.php"); ?>
 <!-- Anfang Einbinden Button "neue Task" -->
 <?php include("content_newtask_btn.php"); ?>
 <!-- Ende Einbinden Button "neuer Task" -->

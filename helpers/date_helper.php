@@ -8,10 +8,10 @@
     function weekDays()
     {
         $dates = weekDate();
-        $ausgabe = "(Montag ";
-        $ausgabe .= $dates[0];
-        $ausgabe .= " - Sonntag ";
-        $ausgabe .= $dates[1];
+        $ausgabe =  "(".dayGerman(date('w',$dates[0]))." ";
+        $ausgabe .= date('d.m.Y',$dates[0]);
+        $ausgabe .= " - ".dayGerman(date('w',$dates[1]))." ";
+        $ausgabe .= date('d.m.Y',$dates[1]);
         $ausgabe .= ")";
         return($ausgabe);
     }
@@ -31,34 +31,67 @@
         switch ($dayNow)
         {
             case "1";
-                $dayStart = date("d.m.Y",mktime(0, 0, 0, date("m"), date("d"),  date("Y")));
-                $dayEnd = date("d.m.Y",mktime(0, 0, 0, date("m"), date("d")+6,  date("Y")));
+                $dayStart = mktime(0, 0, 0, date("m"), date("d"),  date("Y"));
+                $dayEnd = mktime(0, 0, 0, date("m"), date("d")+6,  date("Y"));
                 break;
             case "2";
-                $dayStart = date("d.m.Y",mktime(0, 0, 0, date("m"), date("d")-1,  date("Y")));
-                $dayEnd = date("d.m.Y",mktime(0, 0, 0, date("m"), date("d")+5,  date("Y")));
+                $dayStart = mktime(0, 0, 0, date("m"), date("d")-1,  date("Y"));
+                $dayEnd = mktime(0, 0, 0, date("m"), date("d")+5,  date("Y"));
                 break;
             case "3";
-                $dayStart = date("d.m.Y",mktime(0, 0, 0, date("m"), date("d")-2,  date("Y")));
-                $dayEnd = date("d.m.Y",mktime(0, 0, 0, date("m"), date("d")+4,  date("Y")));
+                $dayStart = mktime(0, 0, 0, date("m"), date("d")-2,  date("Y"));
+                $dayEnd = mktime(0, 0, 0, date("m"), date("d")+4,  date("Y"));
                 break;
             case "4";
-                $dayStart = date("d.m.Y",mktime(0, 0, 0, date("m"), date("d")-3,  date("Y")));
-                $dayEnd = date("d.m.Y",mktime(0, 0, 0, date("m"), date("d")+3,  date("Y")));
+                $dayStart = mktime(0, 0, 0, date("m"), date("d")-3,  date("Y"));
+                $dayEnd = mktime(0, 0, 0, date("m"), date("d")+3,  date("Y"));
                 break;
             case "5";
-                $dayStart = date("d.m.Y",mktime(0, 0, 0, date("m"), date("d")-4,  date("Y")));
-                $dayEnd = date("d.m.Y",mktime(0, 0, 0, date("m"), date("d")+2,  date("Y")));
+                $dayStart = mktime(0, 0, 0, date("m"), date("d")-4,  date("Y"));
+                $dayEnd = mktime(0, 0, 0, date("m"), date("d")+2,  date("Y"));
                 break;
             case "6";
-                $dayStart = date("d.m.Y",mktime(0, 0, 0, date("m"), date("d")-5,  date("Y")));
-                $dayEnd = date("d.m.Y",mktime(0, 0, 0, date("m"), date("d")+1,  date("Y")));
+                $dayStart = mktime(0, 0, 0, date("m"), date("d")-5,  date("Y"));
+                $dayEnd = mktime(0, 0, 0, date("m"), date("d")+1,  date("Y"));
                 break;
             case "7";
-                $dayStart = date("d.m.Y",mktime(0, 0, 0, date("m"), date("d")-6,  date("Y")));
-                $dayEnd = date("d.m.Y",mktime(0, 0, 0, date("m"), date("d"),  date("Y")));
+                $dayStart = mktime(0, 0, 0, date("m"), date("d")-6,  date("Y"));
+                $dayEnd = mktime(0, 0, 0, date("m"), date("d"),  date("Y"));
                 break;
         }
         return array($dayStart, $dayEnd);
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Name: dayGerman
+    // Beschreibung: Wandelt den Tag in Deutsch um
+    //
+    /////////////////////////////////////////////////////////////////////////////////////////////////
+    function dayGerman($tag){
+        switch ($tag){
+            case 1:
+                $tagDeutsch = "Montag";
+                break;
+            case 2:
+                $tagDeutsch = "Dienstag";
+                break;
+            case 3:
+                $tagDeutsch = "Mittwoch";
+                break;
+            case 4:
+                $tagDeutsch = "Donnerstag";
+                break;
+            case 5:
+                $tagDeutsch = "Freitag";
+                break;
+            case 6:
+                $tagDeutsch = "Samstag";
+                break;
+            case 0:
+                $tagDeutsch = "Sonntag";
+                break;
+        }
+        return $tagDeutsch;
     }
 ?>

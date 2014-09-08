@@ -35,10 +35,10 @@
     $_SESSION['last_site'] = $content;
     $_SESSION['last_cat'] = $cat;
     $_SESSION['last_prio'] = $prio;
-    include( "includes/logged_in.php");
-    include( "helpers/date_helper.php");
-    include( "helpers/link_helper.php");
-    //include( "includes/bootstrap.php" );
+    include("includes/logged_in.php");
+    include("helpers/date_helper.php");
+    include("helpers/link_helper.php");
+    include("helpers/filter_helper.php");
 ?>
 <!doctype html>
 <html lang="de">

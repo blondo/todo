@@ -5,7 +5,7 @@
     switch($_SESSION['last_site']){
         case "content_today":
             $content_header_h1="Heute";
-            $content_header_h2='('.date("l, d.m.Y").')';
+            $content_header_h2='('.dayGerman(date('w')).', '.date("d.m.Y").')';
             break;
         case "content_week":
             $content_header_h1='Woche '.date("W");
