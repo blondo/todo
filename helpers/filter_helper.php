@@ -122,4 +122,40 @@
 
         return $new_tasks;
     }
+
+    /**
+     * loadCategories
+     * Gibt alle Kategorien zurück
+     *
+     * @return      array
+     */
+    function loadCategories($categories){
+        $cat = array();
+        foreach($categories as $category)
+        {
+            $cat['name']= $category['name'];
+            $cat['create_date']= $category['create_date'];
+            $cat['creater']=$category['creater'];
+            $cat['status']=$category['status'];
+        }
+        return $cat;
+    }
+
+    /**
+     * categoryName
+     * Gibt die Kategorie zurück
+     *
+     * @return      string   Name der Kategorie
+     */
+    function categoryName(){
+
+        /*foreach($categories as $category)
+        {
+            if($key == $task){
+
+
+            }
+        }
+        return $cat;*/
+    }
 ?>

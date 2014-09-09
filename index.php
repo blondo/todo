@@ -39,6 +39,7 @@
     include("helpers/date_helper.php");
     include("helpers/link_helper.php");
     include("helpers/filter_helper.php");
+    include("helpers/view_helper.php");
 ?>
 <!doctype html>
 <html lang="de">

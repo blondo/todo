@@ -1,26 +1,30 @@
-<!-- Anfang Einbinden Button "neue Task" -->
-<?php include("content_newtask_btn.php"); ?>
-<!-- Ende Einbinden Button "neuer Task" -->
-<!-- Anfang Wrapper -->
-<div class="today_wrapper">
-    <!-- Anfang Today-Header -->
-    <div class="today_header">
-        <?php include ("includes/content_header.php"); ?>
-    </div>
-    <!-- Ende Today-Header -->
-    <!-- Anfang Today-Inhalt -->
-    <?php
-    $new_tasks = filterDate($tasks);
-    $categories = loadCategories($categories);
-    view_list($new_tasks, $categories);
-    /*foreach($new_tasks as $task)
-    {
-        echo '<div class="today_content">';
-            echo '<!-- Anfang Linker-Inhalt -->';
-            echo '<div class="today_content_left">';
-                echo $task['description'];
-            echo '</div>';
-            echo '<!-- Ende Linker-Inhalt -->';
+<?php
+    /**
+     * View-Helper: Hier werden verschiedene Funktionen, welche sich rund um die Ansicht drehen
+     * ausgeführt.
+     *
+     * @author      Manuel Hertach
+     * @copyright   2014 Manuel Hertach
+     *
+     * @version     1.0
+     */
+
+
+
+    /**
+     * view_list
+     * Gibt die Liste der Tasks aus
+     *
+     */
+    function view_list($new_tasks, $categories){
+        foreach($new_tasks as $task)
+        {
+            echo '<div class="today_content">';
+                echo '<!-- Anfang Linker-Inhalt -->';
+                echo '<div class="today_content_left">';
+                    echo $task['description'];
+                echo '</div>';
+                echo '<!-- Ende Linker-Inhalt -->';
             echo '<!-- Anfang Rechter-Inhalt -->';
             echo '<div class="today_content_right">';
                 echo '<div class="today_content_right_header">';
@@ -43,9 +47,7 @@
                 echo '<a href="#"><img src="./icons/tick.png"></a>';
             echo '</div>';
             echo '<!-- Ende Abschliessen-Hacken -->';
-        echo '</div>';
-    }*/
-    ?>
-    <!-- Ende Today-Inhalt -->
-</div>
-<!-- Ende Wrapper -->
+            echo '</div>';
+        }
+    }
+?>
