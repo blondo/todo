@@ -24,26 +24,31 @@
                 case 'content_today':
                     if($task['date_due']==$dates['1'] && $task['status']==0){
                         $new_tasks[] = write_newTask($task);
+                        $new_tasks = filterTask($new_tasks);
                     }
                     break;
                 case 'content_week':
-                    if($task['date_due']>=$dates['0'] && $task['1']<= $dates['1'] && $task['status']==0){
+                    if($task['date_due']>=$dates['0'] && $task['date_due']<= $dates['1'] && $task['status']==0){
                         $new_tasks[] = write_newTask($task);
+                        $new_tasks = filterTask($new_tasks);
                     }
                     break;
                 case 'content_without_date':
-                    if($task['status']==0){
+                    if($task['date_due']=='' && $task['status']==0){
                         $new_tasks[] = write_newTask($task);
+                        $new_tasks = filterTask($new_tasks);
                     }
                     break;
                 case 'content_completed':
                     if($task['status']==1){
                         $new_tasks[] = write_newTask($task);
+                        $new_tasks = filterTask($new_tasks);
                     }
                     break;
                 case 'content_overdue':
                     if($task['date_due']>=$dates['1'] && $task['status']==0){
                         $new_tasks[] = write_newTask($task);
+                        $new_tasks = filterTask($new_tasks);
                     }
                     break;
             }

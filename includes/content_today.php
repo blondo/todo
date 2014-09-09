@@ -10,8 +10,8 @@
     <!-- Ende Today-Header -->
     <!-- Anfang Today-Inhalt -->
     <?php
-    $tasks = filterDate($tasks);
-    $new_tasks = filterTask($tasks);
+    $new_tasks = filterDate($tasks);
+
     foreach($new_tasks as $task)
     {
         echo '<div class="today_content">';

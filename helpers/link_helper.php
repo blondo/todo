@@ -1,4 +1,12 @@
 <?php
+    /**
+     * Erstellt die Links
+     *
+     * @author      Manuel Hertach
+     * @copyright   2014 Manuel Hertach
+     *
+     * @version     1.0
+     */
     $link='';
     if($_SESSION['last_cat']!='')
     {
