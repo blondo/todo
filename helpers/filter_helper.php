@@ -124,38 +124,36 @@
     }
 
     /**
-     * loadCategories
-     * Gibt alle Kategorien zurück
-     *
-     * @return      array
-     */
-    function loadCategories($categories){
-        $cat = array();
-        foreach($categories as $category)
-        {
-            $cat['name']= $category['name'];
-            $cat['create_date']= $category['create_date'];
-            $cat['creater']=$category['creater'];
-            $cat['status']=$category['status'];
-        }
-        return $cat;
-    }
-
-    /**
      * categoryName
      * Gibt die Kategorie zurück
      *
      * @return      string   Name der Kategorie
      */
-    function categoryName(){
+    function categoryName($task){
 
-        /*foreach($categories as $category)
+        foreach($categories as $key=>$category)
         {
             if($key == $task){
-
-
+                $cat = $category['name'];
             }
         }
-        return $cat;*/
+        return $cat;
+    }
+
+    /**
+     * filterSearch
+     * Filtert die Tasks gemäss den Parametern
+     *
+     * @return      array   neues gefiltertes Array
+     */
+    function filterSearch($tasks, $search_txt){
+        $new_tasks = array();
+        foreach($tasks as $task){
+            if($task[''] == $search_txt){
+                $new_tasks[] = write_newTask($task);
+                break;
+            }
+        }
+        return $new_tasks;
     }
 ?>

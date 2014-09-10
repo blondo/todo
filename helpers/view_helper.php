@@ -15,8 +15,11 @@
      * view_list
      * Gibt die Liste der Tasks aus
      *
+     * Bootstrap muss includiert sein!!!
+     *
      */
-    function view_list($new_tasks, $categories){
+    function view_list($new_tasks){
+        include('bootstrap.php');
         foreach($new_tasks as $task)
         {
             echo '<div class="today_content">';
@@ -28,6 +31,7 @@
             echo '<!-- Anfang Rechter-Inhalt -->';
             echo '<div class="today_content_right">';
                 echo '<div class="today_content_right_header">';
+                    //echo '<h3>'.categoryName($task['category']).'</h3>';
                     echo '<h3>'.$categories[$task['category']]['name'].'</h3>';
                     //echo '<h3>'.$task['category'].'</h3>';
                 echo '</div>';

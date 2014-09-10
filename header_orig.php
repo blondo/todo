@@ -3,11 +3,7 @@
         <nav>
 
             <ul>
-                <li><form action="index.php?content=content_search" method="post">
-                    <input type="text" name="search">
-                        <input type="submit" value="Suche" class="button ok" />
-                    </form>
-                    <!--<a href="index.php?content=content_search">Suche</a></li>-->
+                <li><a href="index.php?content=content_search">Suche</a></li>
                 <li class="drop">
                     <a href="#">Einstellungen</a>
 
