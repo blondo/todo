@@ -141,6 +141,17 @@ h3{
     width: 100%;
     border: 1px solid #000000;
 }
+.header_wrapper form input.search_box{
+    border-radius: 5px;
+    border: 1px solid #DDD;
+    font-size: 0.8rem;
+    padding: 5px 3px;
+    background-color: #D8F0FF;
+}
+.header_wrapper form input.find_image{
+    width: 16px;
+    height: 16px;
+}
 
  /* HEADER TOP */
 .header_top{
@@ -149,24 +160,6 @@ h3{
 }
 .header_top img{
     margin: 3px 7px;
-}
-.search_box{
-    width: 200px;
-    float: right;
-    border-left: 1px solid #000000;
-}
-.search_box input{
-    margin: 3px 0px 3px 3px;
-    background: none repeat scroll 0 0 transparent;
-    border-radius: 10px;
-    border: 1px solid;
-    width: 190px;
-    height: 24px;
-}
-.search_icon{
-    width: 40px;
-    float: right;
-
 }
 .setting_icon{
     width: 40px;
@@ -180,7 +173,6 @@ h3{
 
 
 }
-
 /* HEADER BOTTOM */
 .header_bottom{
     height: 50px;
